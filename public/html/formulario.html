@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario de Datos</title>
+</head>
+<body style="text-align: center">
+    <form method="get"   action="#">
+    <!-- ACTION
+    php
+    asp, aspx
+    servlet, jsp
+    -->
+    <h1>Formulario de Datos</h1>
+    <hr>
+    
+
+    <input type="hidden" value="camisa=2,precio=20$">
+    
+    
+    <table border="0" width="100%">
+        <tr>
+            <td width="50%" align="right">
+                <label for="nombre">Nombre</label>
+            </td>
+            <td align="left">
+                <input type="text" id="nombre" size="20" name="nombre">
+            </td>
+        </tr>
+            <td align="right">
+                <label for="apellidos">Apellidos</label>
+            </td>
+            <td align="left">
+                <input type="text" id="apellidos" size="20" name="apellidos">
+            </td>
+        <tr>
+            <td align="right">
+                <label for="clave">Clave</label>
+            </td>
+            <td align="left">
+                <input type="password" id="clave" size="20" name="clave" maxlength="6">
+            </td>
+        
+        </tr>
+
+        <tr>
+
+        </tr>
+    </table>
+    <br>
+
+
+    <!-- botones de radio-->
+    Forma de pago:<input type="radio" name="fpago" value="visa"> Visa
+    <input type="radio" name="fpago" value="master"> Master Card
+    <input type="radio" name="fpago" value="Paypal" checked> Paypal
+    <br>
+    <br>
+    <!-- casillas de verificacion(checkboxes)-->
+    Elegi una o más franjas horarias:<br>
+    <input type="checkbox" name="mañanas" value="m" checked>Mañanas
+    <input type="checkbox" name="tardes" value="t">Tardes
+    <input type="checkbox" name="noches" value="n">Noches
+
+    <br>
+    <!-- listas desplegables simples-->
+    <br>
+    Elige tu cadena favorita:<br>
+    <select name="cadena">
+        <option value="001">Netflix</option>
+        <option value="002" selected>HBO</option>
+        <option value="003">Prime</option>
+        <option value="004">Disney Channel</option>
+    </select>
+    <br>
+
+    <!-- listas múltiples-->
+    <br>
+    Elige tu cadena favorita:<br>
+    <select name="cadena_fav" multiple>
+        <option value="001m">Netflix</option>
+        <option value="002m" selected>HBO</option>
+        <option value="003m">Prime</option>
+        <option value="004m">Disney Channel</option>
+    </select>
+    <br>
+    Observaciones:<br>
+    <textarea></textarea>
+    <br>
+    <input type="reset" value="Borrar datos">
+    <input type="submit" value="Enviar datos">
+
+
+    </form>
+</body>
+</html>

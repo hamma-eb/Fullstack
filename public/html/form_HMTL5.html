@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="#" method="get" autocomplete="off">
+        <!-- autocomplete="off" no funciona en el input email-->
+        <label for="nombre">Nombre:</label>
+        <input type="text" name="nombre" id="nombre" size="20">
+        <br>
+        <br>
+
+        Email:<input type="email" size="20" name="email">
+        <br>
+        Buscar:<input type="search" name="busqueda">
+        <br>
+        Dirección web:<input type="url" name="miurl">
+        <!--hay que poner al menos el protocolo y los : -->
+        <br>
+        Teléfono: <input type="tel" name="telefono" autofocus>
+        <br>
+        Número de productos:<input type="number" min="0" max="10" value="0" step="5">
+        <br>
+        Precio:<input type="range" min="0" max="10" step="1" value="0"><br>
+        Fecha:<input type="date" name="fecha">
+        <br>
+        Semana:</S><input type="week" name="semana">
+        <br>
+        Mes:<input type="month" name="mes">
+        <br>
+        Hora:<input type="time" name="hora">
+        <br>
+        Fecha y Hora (con zona): <input type="datetime" name="fechahora">
+        <br>
+        Fecha y Hora: <input type="datetime-local" name="tiempolocal">
+        <br>
+        Elige un color: <input type="color" name="color">
+        
+        
+
+        Búsqueda web: <input type="search" name="busqueda" placeholder="escriba su búsqueda">
+        <br>
+        DNI:<input type="text" name="dni" required>
+        <br>
+        Código postal: <input type="text" name="codigopostal" size="10" pattern="[0-9]{5}">
+        <br>
+        <datalist id="informacion">
+            <option value="12-234455" label="Teléfono 1"></option>
+            <option value="12-234878" label="Teléfono 2"></option>
+        </datalist>
+       Teléfono:<input type="tel" name="telefono" list="informacion">
+       <br>
+
+        <input type="submit" value="Enviar"  formnovalidate >
+    </form>
+</body>
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function operar()
+        {
+            //parseInt() convierte a entero
+            // number() CONVIERTE A ES ENTERO ES 1 MESG
+            let c1 = parseInt(document.miform.caja1.value);
+            let c2 = parseInt(document.miform.caja2.value);
+            let c3 = parseInt(document.miform.caja3.value);
+            let c4 = parseInt(document.miform.caja4.value);
+            let c5 = parseInt(document.miform.caja5.value);
+            let operacion = (c1+ c2- c3) *c4 / c5;
+            document.miform.cajaR.value = operacion;
+        } //sin function
+    </script>
+</head>
+<body>
+        <form name="miform">
+            <input type="text" size="20" name="caja1">+
+            <input type="text" size="20" name="caja2">-
+            <input type="text" size="20" name="caja3">*
+            <input type="text" size="20" name="caja4">/
+            <input type="text" size="20" name="caja5">
+            <input type="button" onclick="operar()" value="=">
+            <input type="text" size="20" name="cajaR">
+
+        </form>
+      
+    
+</body>
+</html>
