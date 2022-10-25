@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let notas = new Array(5);
+        // let notas=[];
+        for(let i=0;i<notas.length;i++)
+        {
+            notas[i] = Number(prompt(`Pon la nota de cada alumno ${i+1}`));
+            console.log(notas[i]);
+        }
+        //listar notas
+        for(let i=0;i<notas.length;i++)
+        {
+           console.log(notas[i]);
+        } 
+        
+        
+        //nota media
+        /* function notaMedia(araye = []) {
+            let sum = 0;
+            araye.forEach(e => {
+                sum += Number(e);
+            })
+            return sum /araye.length
+         }
+         let notas = [];
+         for (let index = 0; index < 5; index++) {
+            notas.push(prompt(`pon la nota media de cada alumno ${index+1}`));
+            console.log(notas[index]);
+         } 
+
+         console.log(notaMedia(notas));
+         console.log(`nota media es ${notaMedia(notas)}`);*/
+
+         //nota media
+    let media=0;
+for(let i=0;i<notas.length;i++) 
+{
+   
+    media=media+notas[i];
+
+}
+console.log(`la media es ${media/notas.length}`);
+//calcular la nota mayor
+
+let mayor=-1;
+for(let i=0;i<notas.length;i++) 
+{
+    if(notas[i]>mayor){
+        mayor=notas[i];//las intercambio
+    }
+} //for
+console.log(`la nota mayor es ${mayor}`); 
+
+//calcular la nota menor
+let menor=11;
+for(let i=0;i<notas.length;i++) 
+{
+    if(notas[i] < menor){
+        menor=notas[i];//las intercambio
+    }
+} //for
+console.log(`la nota menor es ${menor}`);       
+    </script>
+</body>
+</html>

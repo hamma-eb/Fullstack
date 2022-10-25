@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //factorial del número que metamos por teclado//
+
+       /*let numero=window.prompt("introduce un número");
+        let factorial=1;
+            for(let i=1; i<=numero; i++) 
+            {
+                factorial=factorial*i;
+            }
+        console.log(`El factorial de ${numero} es ${factorial}`);
+        //factorial desde 0 a 10
+       function factorial(val,min, max){
+        let por = val;
+            for(let i= val-1; i > 0; i = i-1)
+            por = por * i
+        
+        if ( val >= min && val <= max) {
+                return por;
+            
+            } else {
+                return "no existe";
+            }
+
+        }
+        console.log(factorial(prompt(`Introduce un número entre 0 y 10`),0,10))*/
+        function t_n(val) {
+            let tipo = false;
+            let no_ = [];
+            let ripit = 0;
+            for (let index= 2; index < val-1; index++) {
+                if ( val % index == 0) {
+                    tipo = true;
+                    no_.push(index)
+                    ripit ++
+                }
+               
+            }
+
+            if (tipo == true) {
+                return `este número es divisible ${ripit}números que son ${no_}`
+            }else {
+                return `este número es divisor ${ripit} números`
+            }
+        }
+        
+
+        console.log(t_n(2169));
+    
+
+    </script>
+</body>
+</html>
