@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+       document.write("<P><b>Hoy es Miércoles</b></p>");
+        document.write("<UL><li>Lunes</li><li>Martes</li></ul>");
+            //cabeceras H desde 1 a 6
+            for (let index = 1; index <= 6; index++) {
+                document.write(`<h${index}> cabecera de tamaño ${index}</${index}><br>`);
+                
+            }
+
+            //matriz unitaria
+            for (let index = 0; index < 4; index++) {
+                for (let index_ = 0; index_ < 4; index_++) {
+                document.write("0");
+            }
+            document.write("<br>");
+            }
+
+            for (let index = 0; index < 4; index++) {
+                for (let index_ = 0; index_ < 4; index_++) {
+
+                    if(index==index_ || (index+index_)==3) {
+                        document.write(`<font color="red">1</font>`);
+                    }else {
+                        document.write("0");
+                    }
+                }    
+                document.write("<br>");
+            }
+            
+    </script>
+</body>
+</html>

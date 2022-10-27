@@ -27,31 +27,31 @@
             }else {
                 alert("Has fallado!!")
             }
-        }*/
+        }
 
         let palabra = window.prompt("introduce una palabra");
         while(palabra!='javascript'){
             console.log('Has fallado!!!')
             palabra = window.prompt("Introduce una palabra");
         }
-        console.log('Has acertado!!!');
+        console.log('Has acertado!!!');*/
 
 
         let x = false;
         let palabras = ["javascript","html","css"];
-        let p = palabras[Math.floor(Math.random()*3)];
-
-        let bakht = 2;
+        let p = palabras[0];
+2.85
+        let bakht = 3;
         while( x == false){
            let palabra = prompt("Introduce una palabra javascript - css - html");
 
            if (palabra == p) {
             x = true;
-
-            alert("perfecto" +k)
+            alert(`PERFECTO`);
+            
            }else {
             bakht -= 1;
-            alert(`otra vez falta ${bakht} veces`)
+            alert(`otra vez falta ${bakht} intentos`)
            }
            if(bakht <= 0) {
             x = true;
