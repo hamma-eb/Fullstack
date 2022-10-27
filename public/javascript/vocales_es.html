@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // Número de vocales y número de Letras e
+        let cadena="hoy es vEintisiEte dE octubrE de dosmilveintidos";
+        let num_vocales=0;
+        let num_es=0;
+        cadena=cadena.toLocaleLowerCase();
+            for (let index = 0; index < cadena.length; index++) {
+                let letra=cadena.charAt(index);
+                switch(letra)
+                {
+                    case 'a':num_vocales++;
+                        break;
+                    case 'e': num_vocales++;num_es;
+                        break;
+                    case 'i': num_vocales++;
+                        break;
+                    case 'o': num_vocales++;
+                        break;
+                    case 'u': num_vocales++;
+                        break;
+                   
+                }//switch
+                    }//for
+                console.log(`vocales: ${num_vocales}`);
+                console.log(`es: ${num_es}`);
+        
+    </script>
+</body>
+</html>
