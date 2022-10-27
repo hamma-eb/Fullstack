@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        img {
+            width: 200px;
+            height: 250px;
+        }
+
+        input {
+            width: 100px;
+            height: 50px;
+            font-size: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <script>
+        /*let dado=()=>{
+    
+        
+        //la funcion Math. ceil() devuelve el entero mayor o igual más proximo a un número dado.
+        let numeroAleatorio = (Math.random()*10);
+        console.log(numeroAleatorio);
+        console.log(Math.ceil(numeroAleatorio));
+        let numeroAleatorio = Math.ceil(numeroAleatorio)*6);
+        //alert(numeroAleatorio);
+        document.images[0].src= `./images/dado${numeroAleatorio}.png`;
+        
+    }*/
+
+    </script>
+    <!--<img src="images/dadospng/dado1.png" width="100" height="100">
+<button onclick="dado">JUGAR</button>-->
+    <img src="images/dadospng/dado1.png">
+    <img src="images/dadospng/dado2.png">
+    <img src="images/dadospng/dado3.png">
+    <img src="images/dadospng/dado4.png">
+    <img src="images/dadospng/dado5.png">
+    <img src="images/dadospng/dado6.png">
+    <input onclick="jugar()" type="button" value="invertir">
+
+    <!--
+    <img src="images/dadospng/dado1.png" width="250" height="250">
+    <img src="images/dadospng/dado2.png"width="250" height="250">
+    <img src="images/dadospng/dado3.png"width="250" height="250">
+    <img src="images/dadospng/dado4.png"width="250" height="250">
+    <img src="images/dadospng/dado5.png"width="250" height="250">
+    <img src="images/dadospng/dado6.png"width="250" height="250">
+    <input onclick="jugar()" type="button" value="invertir">-->
+    <script>
+        
+                // let jugar = ()=> {
+
+                //document.images[0].src= `${location.origin}/public/javascript/images/dadospng/dado${Math.ceil(Math.random()*6)}.png`; 
+                // }
+                //invertir los dados 
+                //let invertir = ()=> {
+                //  for (let i = 5; i >= 0; i--) {
+                /// document.images[ 5- i].src=`imagen/dadp${i+1}.png`;
+                // */
+                let jugar = ()=> {
+                let no = 1;
+            for (let index = document.images.length-1; index >= 0; index--) {
+
+                document.images[index].src = `${location.origin}/public/javascript/images/dadospng/dado${no}.png`;
+            no++;
+            }
+
+    }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+    <script>
+       /* let a=2;
+        let b=3;
+
+        let c=(a<b)? 1:0;
+        console.log(c)  */
+        function ocultar() {
+
+            document.images[0].style.visibility = (document.images[0].style.visibility == "visible")
+            ? "hidden":"visible";
+        }
+    </script>
+</head>
+<body>
+    <img src="images/futbol.png" width="200" height="200" style="visibility:visible">
+    <br>
+    <button onclick="ocultar()">Ocultar</button>
+</body>   
+</html>
