@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .back {
+            width: 300px;
+            height: 500px;
+            border: 2px solid black;
+            margin: 3px auto;
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .numeros {
+            width: 25px;
+            height: 45px;
+            background-color: aqua;
+            color: rgb(40, 126, 206);
+            margin-left: 8px;
+            margin-right: 8px;
+            border: 1px solid gray;
+            border-radius: 10px;
+        }
+
+        .game_button {
+            width: 200px;
+            height: 80px;
+            background-color:green;
+            color: rgb(40, 126, 206);
+            border: .5px solid blue;
+            margin: 30px auto;
+
+        }
+    </style>
+</head>
+
+<body>
+    <script>
+        let game;
+        function CrateElement(data = { name: "div", inerhtml: undefined, id: undefined, clas: undefined, type: undefined, value: undefined, style: undefined, src: undefined}) {
+            let element = document.createElement(data.name);
+            if (data.inerhtml !== undefined) element.innerHTML = data.inerhtml;
+            if (data.id !== undefined) element.id = data.id;
+            if (data.clas !== undefined) element.className = data.clas;
+            if (data.type !== undefined) element.type = data.type;
+            if (data.value !== undefined) element.value = data.value;
+            if (data.style !== undefined) element.style.cssText = data.style;
+            if (data.src !== undefined) element.src = data.src;
+            if (data.style !== undefined) {
+                data.forEach(e => {
+                    element.setAttribute(e.name, e.value);
+                })
+            }
+            return element
+
+        }
+
+
+        function araye_sinrepit(val,val2) {
+            let araye = [];
+            let no = 0;
+            while (araye.length < val) {
+                let no_random = Math.floor(Math.random() * val2) + 1;
+                let no_ = 0;
+                for (let index = 0; index < araye.length; index++) {
+                    if (araye[index] == no_random) no_++;
+                }
+                if (no_ == 0) araye.push(no_random);
+            }
+            return araye;
+        }
+        console.log(araye_sinrepit(6,49));
+
+      
+
+        function Game() {
+            this.logo = CrateElement({name: "img", clas:"logo",src:"./images/loterias.png"})
+            this.back = CrateElement({name:"div", clas:"back"})
+            this.numeros = [];
+
+            for (let index = 1; index <= 49; index++) {
+                this.numeros.push(CrateElement({ name: "input", clas: "numeros", value:index,type: "button"}));
+
+            }
+            this.game_button = CrateElement({ name: "input", clas: "game_button", value: "Game", type: "button" })
+
+            this.Crate();
+            this.game_button.addEventListener("click", ()=>{
+                this.Play()
+            })
+
+
+        }
+        Game.prototype.Crate = function () {
+            document.querySelector("body").appendChild(this.logo);
+            console.log(this.back)
+            document.querySelector("body").appendChild(this.back);
+            document.querySelector("body").appendChild(this.game_button);
+            this.numeros.forEach(e => {
+                this.back.appendChild(e);
+            })
+        }
+        Game.prototype.Play = function () {
+            let numeros = araye_sinrepit(6,49);
+            
+            this.numeros.forEach(e => {
+                e.style.backgroundColor = "red"
+            })
+            for (let index = 0; index < numeros.length; index++) {
+                this.numeros[numeros[index] - 1].style.backgroundColor = "gold";
+                
+            }
+        }
+        game = new Game()
+    </script>
+</body>
+
+</html>
