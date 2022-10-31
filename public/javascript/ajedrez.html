@@ -39,9 +39,9 @@
                 if (index_ < 8) {
                     
                     if (no % 2 == 0) {
-                        td += `<td  width="50px" id="td${index}${index_}" height="50px" bgcolor="#000000"></td>`;
+                        td += `<td  width="50px" id="td${index}${index_}" height="50px" bgcolor="#f1c27d"></td>`;
                     }else {
-                        td += `<td width="50px" id="td${index}${index_}" height="50px" bgcolor="#ffffff"></td>`;
+                        td += `<td width="50px" id="td${index}${index_}" height="50px" bgcolor="#8d5524"></td>`;
                     }
                 }
                 
@@ -57,9 +57,15 @@
         let m_no = 0;
         for (let index = 0; index < trs.length; index++) {
 
-            if (index >= 0 && index <= 15 || index >= 48 && index <= 64) {
+            if (index >= 48 && index <= 64) {
                 
-                trs[index].innerHTML = `<h3 >${mohreha[m_no]}</h3>`;
+                trs[index].innerHTML = `<h3 style="color: white;" >${mohreha[m_no]}</h3>`;
+               
+                m_no++;
+            }
+            if (index >= 0 && index <= 15) {
+                
+                trs[index].innerHTML = `<h3 style="color: black;" >${mohreha[m_no]}</h3>`;
                
                 m_no++;
             }

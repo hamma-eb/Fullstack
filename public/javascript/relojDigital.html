@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2? family= Oswald:wght@200 & display=swap');
+        * {
+            margin: 0;
+            padding: 0;
+            font-family: 'Oswald', sans-serif;;
+        }
+        body {
+            display: flex;
+        }
+        .widget {
+            width: 100%;
+            height: 800px;
+            background-image: url(./images/fondo-borroso-de-las-luces-con-nieve-que-cae-invierno-colorido-abstracto-bg-137052111.jpeg);
+            background-repeat: no-repeat;
+            background-size: cover;
+
+        }
+        .fecha {
+            width: 400px;
+            height: 100px;
+            margin: 100px auto;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: space-between;
+            font-size: 40px;
+        }
+        .reloj {
+            width: 200px;
+            height: 80px;
+            margin: 10px auto;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: space-evenly;
+            font-size: 30px;
+        }
+        .reloj p {
+            width: 40px;
+        }
+    </style>
+</head>
+<body>
+    <div class="widget">
+        <div class="fecha" id="fecha">
+            <p class="diaSemana" id="diaSemana">Lunes</p>
+            <p class="dia" id="dia"> 31</p>
+            <p class="mes" id="mes">oct</p>
+            <p class="year" id="year">2022</p>
+        </div>
+
+        <div class="reloj" id="reloj">
+            <p class="hora" id="hora">15</p>
+            <p>:</p>
+            <p class="minutos" id="minutos">05</p>
+            <p>:</p>
+            <p class="segundos" id="segundos">20</p>
+        </div>
+
+    </div>
+    <script>
+        let meses = ['Enero','Febrero','Marzo','Abril','Mayo','Junio','Julio','Agosto','Septiembre','Octubre','Noviembre','Diciembre'];
+        let diasSemana = ['Lunes','Martes','Miercoles','Jueves','Viernes'];
+       let DiaSemana = document.getElementById("diaSemana");
+       let Dia = document.getElementById("dia");
+       let Mes = document.getElementById("mes");
+       let Year = document.getElementById("year");
+       let Hora = document.getElementById("hora");
+       let Minutos = document.getElementById("minutos");
+       let Segundos = document.getElementById("segundos");
+
+       setInterval(() => {
+        let date = new Date();
+        let diasemana = date.getDay();
+        let dia = date.getDate();
+        let mes = date.getMonth();
+        let year = date.getFullYear();
+        let hora = date.getHours();
+        let minutos = date.getMinutes();
+        let segundos = date.getSeconds();
+
+    DiaSemana.innerHTML = diasSemana[diasemana-1];
+    Mes.innerHTML = meses [mes];
+    Year.innerHTML = year;
+    Dia.innerHTML = dia;
+    Hora.innerHTML = hora;
+    Minutos.innerHTML = minutos;
+    Segundos.innerHTML = segundos;
+        console.log(hora);
+       }, 1000);
+
+       
+
+    </script>
+</body>
+</html>
