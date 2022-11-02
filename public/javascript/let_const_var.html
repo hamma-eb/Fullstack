@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+         console.log(nombre);// hoisting
+         //console.log(email);
+
+        var  numero1=4;
+
+        function verNumeroVar()
+        {
+            var numero1=9;
+            var numero1=6;
+            console.log(numero1);
+            var edad="90";
+            const x=2.3;
+        }
+        //console.log(edad);// edad no visible fuera de function, var tiene block scope
+        //console.log(x); x no es visible fuera de la function, const es block scope
+        function verNumerolet()
+        {
+            let numero1=9;
+            //let numero1=6; con let no se permite
+            console.log(numero1);
+            let pais="Portugal";
+        }
+        //console.log(pais);//no seria visible let tiene block scope
+        verNumeroVar();
+        console.log(numero1);
+        var nombre; //hoisting
+        let email;
+        let radio;
+        if(PI == 3.14) {
+            //LET RADIO= 23.45 NO SE PUEDE HACER!!!
+            radio=23.45;
+        }
+        console.log(radio);
+       // PI=3.15; la constante no se puede modificar
+
+    </script>
+</body>
+</html>

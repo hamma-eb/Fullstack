@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+
+    <script>
+        function opcion(link, name) {
+            this.link = link;
+            this.option = document.createElement("option");
+            this.option.value = link;
+            this.option.innerHTML = name;
+
+            selector.appendChild(this.option);
+        }
+        let videos = [{ name: "origen", link: '<iframe width="560" height="315" src="https://www.youtube.com/embed/CaYl_nzeHIw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>' },
+        { name: "avatar", link: '<iframe width="560" height="315" src="https://www.youtube.com/embed/Qi5ZD-TF3TQ?controls=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>' },
+        { name: "los vengadores", link: '<iframe width="560" height="315" src="https://www.youtube.com/embed/So83tNnXtE4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>' },]
+        let body = document.querySelector("body");
+        let selector = document.createElement("select");
+
+        let video = document.createElement("div");
+        video.style.cssText = "width: 500px";
+
+
+        body.appendChild(selector);
+        body.appendChild(video);
+        video.innerHTML = '<iframe width="560" height="315" src="https://www.youtube.com/embed/CaYl_nzeHIw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>';
+        let opciones = []
+        videos.forEach(e => {
+
+
+            opciones.push(new opcion(e.link, e.name))
+        })
+
+        selector.addEventListener("input", (e_) => {
+
+            video.innerHTML = selector.value
+            console.log(selector.value);
+        })
+
+
+    </script>
+</body>
+
+</html>
