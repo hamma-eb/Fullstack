@@ -9,3 +9,14 @@ const server = http.createServer(app)
 server.listen(port,()=>{
     console.log(`server is up on port ${port}`)
 })
+
+const socketio = require("socket.io");
+const io = socketio(server);
+
+io.on("connection",(client)=> {
+    console.log("new connect");
+
+    client.on("disconnect",()=>{
+        console.log("new disconnect");
+    })
+})
