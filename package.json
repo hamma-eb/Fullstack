@@ -9,7 +9,7 @@
   "name": "fullstack",
   "description": "",
   "version": "1.0.0",
-  "main": "server.js",
+  "main": "public/javascript/blackjack/app.js",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/hamma-eb/Fullstack.git"
