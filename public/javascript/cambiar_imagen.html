@@ -1,12 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <script>
-        let estado_cambio=false;
+        let estado_cambio = false;
         function cambiar() {
             /*
             if(estado_cambio==false){
@@ -16,17 +17,21 @@
             document.images[0].src='images/futbol.png';
             estado_cambio=false
             }*/
-            
+
 
             //con operador ternario
-            document.images[0].src=(document.images[0].src==`http://127.0.0.1:5500/public/java%20script/images/futbol.png`)
-            ?`http://127.0.0.1:5500/public/java%20script/images/nba.png`:`http://127.0.0.1:5500/public/java%20script/images/futbol.png`;
-            }
+            document.images[0].src = (document.images[0].src == `http://127.0.0.1:5500/public/java%20script/images/futbol.png`)
+                ? `http://127.0.0.1:5500/public/java%20script/images/nba.png` : `http://127.0.0.1:5500/public/java%20script/images/futbol.png`;
+        }
+    </script>
+
 </head>
+
 <body>
     <img src="images/futbol.png" width="200" height="200">
     <br>
     <button onclick="cambiar()">Cambiar Imagen</button>
 
 </body>
+
 </html>
