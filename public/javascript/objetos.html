@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const consumible= {
+            nombre: 'manzana',
+            categoria:'frutas',
+            precio: 1.99
+        }
+        console.log(consumible);
+
+        const pizza ={
+            ingrediente: "queso",
+            salsa:"marinara",
+            tamaño:"pequeña"
+        };
+        console.log(pizza);
+        console.log(pizza.ingrediente);
+        pizza.ingrediente='jamón';
+        console.log(pizza.ingrediente);
+        const carritoDeCompras = {
+            1:"manzana",
+            2:"naranjas",
+        };
+        console.log(carritoDeCompras);
+
+        const programador = {
+            primerNombre: "Phil",
+            edad: 21,
+            desarrolladorBackend: true,
+            lenguajes: ["Phyton","JavaScript", "Java","C++"],
+            "nombre del proyecto actual":"la aplicación asombrosa"
+
+        };
+        console.log(programador);
+        console.log(programador.lenguajes[1]);
+
+        const animal = {
+            tipo: "gato",
+            nombre:"Milos",
+            //sonidos() {return("miau miau")}
+            sonidos:()=>"miau miau",
+        };
+        console.log("Mi gato se llama" + animal.nombre + "y dice" + animal.sonidos());
+
+        //const libro = {};
+        const libro = new Object();
+        libro.autor ="Jane Smith";
+        libro.precio=30;
+        libro.isbn='B-27852343';
+
+        console.log(libro);
+
+        const jugadorDeBaloncesto = {
+            nombre: "James",
+            promedioDePuntosPorJuego: 20,
+            estatura: "2 metros, 06 centímetros",
+            posición:"escolta"
+        };
+        console.log(jugadorDeBaloncesto.posición);
+
+        delete jugadorDeBaloncesto.posición;//borra una pareja clave:valor
+        console.log(jugadorDeBaloncesto);
+
+        //dar valores con
+        const empleado = {};
+        //let ocupacion="ocupacion";
+        empleado["ocupación"]="ventas";
+        //empleado.ocupacion='ventas';
+        console.log("ocupación");
+        //tambien se puede hacer así: empleado.ocupación='ventas';
+
+        //AGREGA CLAVE CON MULTIPLES PALABRAS
+        empleado["viaja frecuentemente"]= true;
+
+
+        //agrega clave que empieza con un numero y contiene un guion
+        empleado["1er-territorio"]="Chicago";
+
+        //agrega clave que empieza con numeros
+        empleado["25"] = "clientes totales";
+        console.log(empleado["25"]);//ojo! con el . da error
+
+      
+
+
+        let propiedad="antiguedad en la empresa";
+        let valor = "5 años";
+
+        empleado[propiedad]=valor;
+        //cuando definimos la clave y el valor con variables
+        //no se puede acceder a ellas con la notación punto(.),
+        //debemos usar los corchetes  ([] )
+        console.log(empleado[propiedad]);
+        
+        //**************************************************************
+    
+        const corredora = {
+            nombre : "Jessica",
+            edad: 20,
+            kilometrosPorSemana: 64,
+            carrera: "maratón"
+        };
+
+
+        let keys= Object.keys(corredora);
+        //devuelve un array con las claves, columna izquierda
+        console.log(keys);
+
+        let values = Object.values(corredora);
+        //devuelve un array con los valores,
+        console.log(values);
+
+        //iterando un objeto java script
+
+        let perro = {
+            nombre: "Scott",
+            color:"Negro",
+            macho: true,
+            edad: 5
+        };
+
+        //keys
+        let claves = Object.keys(perro); //claves = [ "nombre", "color", "macho","edad"]
+        for (let i = 0;i < claves.length; i++) {
+            let clave =claves [i];
+            console.log(perro[clave]);
+            
+        }//for
+        let valores = Object.values(perro);// claves = ["Scott", "negro", true]
+        for (let i = 0;i < valores.length; i++) {
+            console.log(perro[valores]);
+        }
+
+        //for in, es un for que sirve para recorrer objetos
+        for (let clave in perro) {
+            console.log(perro[clave]);
+        }
+
+        //con entries y for ...each
+
+        let key_value = Object.entries(perro);
+
+        //estas dos líneas de abajo harían exactamente lo mismo
+        console.log(key_value);
+        console.log(key_value[0][1]);
+
+        key_value.forEach(([key, value]) => {
+            console.log(value);
+        })
+
+    </script>
+</body>
+</html>
