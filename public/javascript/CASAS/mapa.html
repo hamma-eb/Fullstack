@@ -5,13 +5,26 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <Script >
+        function pintaMapa() {
+            let object = { 'mapa' : 'images/Madrid.jpg'};
+            localStorage.setItem('key', JSON.stringify(object));
+            let objmapa=JSON.parse(localStorage.getItem('key'))
+
+            node = document.createElement("input");
+            node.setAttribute ('src', objmapa.mapa);
+            node.setAttribute ('type', 'image');
+            node.setAttribute ('name', 'mapa');
+            document.getElementById("madrid").appendChild(node);
+        }
+    </Script>
 </head>
-<body>
+<body  onload="pintaMapa()">
     <center>
         <form action="mapa.php" name="madrid">
-        <input type="image" src="images/Madrid.jpg" name="mapa">
+
         </form>
     </center>
-    <Script S></Script>
+    
 </body>
 </html>
