@@ -89,7 +89,7 @@ function getMessage1(cart = 0, cartas_ = []) {
             cartas = [];
             
             background.innerHTML = "";
-            button.value = "Empieza a jugar con 10 Fichas";
+            button.value = "Empieza jugar con 10 Fichas";
             
         }
     }
@@ -110,7 +110,7 @@ let cartas = [];
 let fichas = [];
 button.addEventListener("click", () => {
     
-    if(button.value == "Empieza a  jugar con 10 Fichas" && bancodeFichas > 0) {
+    if(button.value == "Empieza jugar con 10 Fichas" && bancodeFichas > 0) {
         button.value = "Dame carta";
         fichas.push(new Fichas(punto,1));
         fichas.push(new Fichas(punto,2));
@@ -137,4 +137,3 @@ button.addEventListener("click", () => {
     }
 
 })
-
