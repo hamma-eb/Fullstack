@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            border: 0;
+        }
+            
+        body {
+            display: flex;
+            flex-direction: column;
+            background-color: cadetblue;
+        }
+        form {
+            display: flex;
+            flex-direction: column;
+            margin: 100px auto;
+        }
+        input{
+            margin-top: 20px;
+            width: 300px;
+            height: 60px;
+            background-color: coral;
+            border: .5px solid black;
+            border-radius: 10px;
+            outline: none;
+            color: aqua;
+        }
+        select{
+            margin-top: 20px;
+            width: 300px;
+            height: 60px;
+            background-color: green;
+            border: .5px solid black;
+            border-radius: 10px;
+            outline: none;
+        }
+        input [type = "submit"] {
+            width: 250px;
+            height: 50px;
+            font-size: 20px;
+        }
+    </style>
+</head>
+<body>
+    <form method="post"  action="./connection.jsp">
+            <input type="text" placeholder="Nombre" name="nombre">
+            <input type="text" placeholder="Seleccion" name="seleccion">
+            <select name="bandera">
+                <option value="españa.png">España</option>
+                <option value="portugal.png">Portugal</option>
+                <option value="brasil.png">Brasil</option>
+            </select>
+            <input type="number" placeholder="Jugados" name="jugados">
+            <input type="number" placeholder="Ganados" name="ganados">
+            <input type="number" placeholder="Perdidos" name="perdidos">
+            <input type="number" placeholder="Empatados" name="empatados">
+            <input type="submit" value="Guardar">
+           
+    </form>
+</body>
+</html>
